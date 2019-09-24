@@ -1,0 +1,22 @@
+App\Entity\User:
+  type: entity
+
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+
+  fields:
+    username:
+      type: string
+      length: 255
+      unique: true
+
+    password:
+      type: string
+      length: 644
+
+    roles:
+      type: array
+

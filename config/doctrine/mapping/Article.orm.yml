@@ -1,0 +1,33 @@
+App\Entity\Article:
+  type: entity
+
+  id:
+      id:
+        type: integer
+        generator:
+          strategy: AUTO
+
+  fields:
+      title:
+        type: string
+        length: 255
+
+      createdAt:
+        type: datetime
+
+      updateAt:
+        type: datetime
+        nullable: true
+
+      description:
+        type: text
+
+      image:
+        type: string
+        length: 255
+        nullable: true
+
+  lifecycleCallbacks:
+    prePersist: [ setCreatedAtValue ]
+    preUpdate: [ setUpdateAtValue ]
+

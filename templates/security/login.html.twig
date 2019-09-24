@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <form action="{{ path('connexion') }}" method="post" class="form-login">
+        <h1 class="h1-form">Se connecter</h1>
+        <div>
+            <input type="text" id="username" name="_username" placeholder="Identifiant" value="{{ last_username }}" />
+        </div>
+
+        <br>
+
+        <div>
+            <input type="password" id="password" name="_password" placeholder="Mot de passe" />
+        </div>
+
+        <br>
+
+        <input type="hidden" name="_target_path" value="{{ path('index') }}" />
+
+        <input type="submit" value="Connexion"/>
+        <br>
+        <span class="span-account">Pas de compte ? <a href="{{ path('user_inscription') }}" class="lien-inscription">Inscrivez-vous ici !</a></span>
+
+    </form>
+
+{% endblock %}

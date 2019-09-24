@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <br>
+    {% for article in articles %}
+        <div class="row article">
+            <div class="col">
+                <div class="row articleTitle">
+                    <h1>{{ article.title }}</h1>
+                </div>
+
+                {% if is_granted('ROLE_ADMIN') %}
+                    <div class="box_conf">
+                        <a href="{{ path('edition', {'id': article.id}) }}" class="icons" title="Editer">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="{{ path('suppression', {'id': article.id}) }}" class="icons" title="Supprimer">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                {% endif %}
+
+                <div class="row">
+                    <a>
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="{{ asset('images/' ~ article.image) }}" alt="{{ article.title }}">
+                    </a>
+                </div>
+                <div class="row articleContent">
+                        <p>{{ article.description }}</p>
+                </div>
+                <div class="row articleFooter">
+                    <div class="col-6 createdDate">
+                        <p>Créé le : {{ article.createdAt|date("d/m/Y") }}</p>
+                    </div>
+                    <div class="col-6 updateDate">
+                        <p>Edité le : {{ article.updateAt|date("d/m/Y") }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

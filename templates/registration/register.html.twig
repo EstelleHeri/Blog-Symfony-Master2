@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="form-register">
+    {{ form_start(form) }}
+    <h1 class="h1-form">Inscription</h1>
+        <div>
+            {{ form_label(form.username) }}
+            {{ form_widget(form.username) }}
+        </div>
+        <div>
+            {{ form_label(form.plainPassword.first) }}
+            {{ form_widget(form.plainPassword.first)  }}
+
+        </div>
+        <div>
+            {{ form_label(form.plainPassword.second) }}
+            {{ form_widget(form.plainPassword.second)  }}
+            <span class="error-password">{{ form_errors(form.plainPassword.first) }}</span>
+        </div>
+
+        <input type="submit" value="S'inscrire"/>
+    {{ form_end(form) }}
+    </div>
+
+{% endblock %}

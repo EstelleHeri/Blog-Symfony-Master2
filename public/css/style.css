@@ -1,0 +1,222 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    margin-bottom: 60px;
+}
+
+/*Footer */
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #343a40;
+    color: white;
+}
+
+
+input {
+    border: none;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+a.navbar-right {
+    text-decoration: none;
+    color: #df9fbf;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a.navbar-right:hover {
+    color: #993366;
+
+}
+
+a.buttonAdd {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a.buttonAdd:hover {
+    color: #993366;
+
+}
+
+span.usernamespan {
+    color: white;
+    font-size: 20px;
+}
+
+/*Articles */
+.container {
+    width: 800px;
+}
+
+.article {
+    border-bottom: 1px solid gray;
+    margin-bottom: 40px;
+}
+
+.articleTitle {
+    color: #4d4d4d;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.articleFooter {
+    padding-top: 5px;
+}
+
+.articleContent {
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.createdDate {
+    text-align: left;
+}
+
+.updateDate {
+    text-align: right;
+}
+
+/*Formulaire connexion et inscription */
+
+.form-login {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 200px;
+    padding: 22px 22px 22px 22px;
+    width: 320px;
+    border-radius: 5px;
+    background: #282e33;
+    border-top: 3px solid #df9fbf;
+    border-bottom: 3px solid #df9fbf;
+}
+
+.form-register {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 22px 22px 22px 22px;
+    width: auto;
+    border-radius: 5px;
+    background: #282e33;
+    border-top: 3px solid #df9fbf;
+    border-bottom: 3px solid #df9fbf;
+}
+
+#username, #password, #user_username, #user_plainPassword_first, #user_plainPassword_second {
+    background-color: #3b4148;
+    border-radius: 0px 3px 3px 0px;
+    color: #a9a9a9;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 240px;
+    height: 50px;
+}
+
+#username:focus, #password:focus, #user_username:focus, #user_plainPassword_first:focus, #user_plainPassword_second:focus {
+    outline-color: #df9fbf;
+}
+
+form input[type="submit"] {
+    background: #df9fbf;
+    border: 0;
+    width: 235px;
+    height: 40px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+form input[type="submit"]:hover {
+    background: #993366;
+}
+
+.h1-form {
+    color: white;
+    margin-bottom: 1em;
+}
+
+a.lien-inscription {
+    text-decoration: none;
+    color: #df9fbf;
+}
+
+a.lien-inscription:hover {
+    color: #993366;
+}
+
+span.span-account {
+    color: white;
+}
+
+label {
+    color: white;
+    width: 220px;
+}
+
+span.error-password ul {
+    list-style-type: none;
+    color: indianred;
+}
+
+/*Add Article */
+#article_title {
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+    font-size: 22px;
+    padding: 0 16px;
+}
+
+#article_description {
+    padding: 0 16px;
+}
+
+#article_title:focus, #article_description:focus, #article_image {
+    outline-color: #df9fbf;
+}
+
+.div_image {
+    display: inline-block;
+    width: 300px;
+    margin-right: 200px;
+}
+
+#article_image {
+    padding: 0 16px;
+    width: 100%;
+    height: 40px;
+
+}
+
+/* Icon configuration delete and edit article */
+.box_conf {
+    text-align: right;
+}
+
+a.icons {
+    text-decoration: none;
+    color: #df9fbf;
+    font-size: 35px;
+    margin-left: 30px;
+}
+
+a.icons:hover {
+    color: #993366;
+}
